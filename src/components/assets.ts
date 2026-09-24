@@ -1,4 +1,4 @@
-const assetPathPrefix = "/assets";
+const assetPathPrefix = `${import.meta.env.BASE_URL}assets`;
 
 // DALABA PRODUCTIONS logo (vector composition from the design)
 export const logoVectors = [
