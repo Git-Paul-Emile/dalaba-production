@@ -1,0 +1,10 @@
+{
+  "description": "Create stunning landing pages that adhere to your brand's design guidelines, ensuring consistency in colors, fonts, and layout for effective marketing.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
