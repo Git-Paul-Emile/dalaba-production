@@ -18,3 +18,7 @@ logs/
 # beside it.
 /.plugins/
 /.opencode-skills/
+
+desktop.ini
+.DS_Store
+folderico-green.ico

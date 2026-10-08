@@ -28,11 +28,11 @@ export const imgInstagram = `${assetPathPrefix}/469e9.svg`;
 export const imgBaobabs = `${assetPathPrefix}/f4860.jpg`;
 
 export const services = [
-  "Communication digital",
-  "Création/design",
-  "Production vidéo",
-  "Événementiel",
-  "Cinéma",
+  "PRODUCTION AUDIOVISUELLE",
+  "CINEMA & FICTION",
+  "CREATION & DESIGN",
+  "COMMUNICATION NUMÉRIQUE",
+  "ÉVÉNEMENTIEL",
 ];
 
 export const clientLogosRow1 = [
