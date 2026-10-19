@@ -1,40 +1,54 @@
 import { useRef, useState } from "react";
-import { imgBaobabs, videoLafarge, clientLogosRow1, clientLogosRow2 } from "./assets";
+import { videoLafargeWebm, videoLafargeMp4, clientLogosRow1, clientLogosRow2 } from "./assets";
 
 export function BaobabsSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
+  const [playing, setPlaying] = useState(true);
 
   const toggleSound = () => {
     const video = videoRef.current;
     if (!video) return;
     video.muted = !muted;
-    if (video.paused) void video.play();
     setMuted(!muted);
   };
+
+  const togglePlay = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) void video.play();
+    else video.pause();
+  };
+
+  const buttonClass =
+    "rounded-full bg-black/50 px-4 py-2 text-sm text-white backdrop-blur-sm transition hover:bg-black/70";
 
   return (
     <section className="relative h-[340px] w-full overflow-hidden bg-black">
       <video
         ref={videoRef}
         aria-label="LAFARGE - Vidéo officielle"
-        className="h-[340px] w-full object-cover"
-        src={videoLafarge}
-        poster={imgBaobabs}
+        className="h-[340px] w-full cursor-pointer object-cover"
+        onClick={togglePlay}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
         autoPlay
         muted
         loop
         playsInline
         preload="metadata"
-      />
-      <button
-        type="button"
-        onClick={toggleSound}
-        aria-label={muted ? "Activer le son" : "Couper le son"}
-        className="absolute right-4 bottom-4 rounded-full bg-black/50 px-4 py-2 text-sm text-white backdrop-blur-sm transition hover:bg-black/70"
       >
-        {muted ? "🔇 Activer le son" : "🔊 Couper le son"}
-      </button>
+        <source src={videoLafargeWebm} type="video/webm" />
+        <source src={videoLafargeMp4} type="video/mp4" />
+      </video>
+      <div className="absolute right-4 bottom-4 flex gap-2">
+        <button type="button" onClick={togglePlay} className={buttonClass}>
+          {playing ? "⏸ Pause" : "▶ Lecture"}
+        </button>
+        <button type="button" onClick={toggleSound} className={buttonClass}>
+          {muted ? "🔇 Activer le son" : "🔊 Couper le son"}
+        </button>
+      </div>
     </section>
   );
 }
