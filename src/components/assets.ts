@@ -26,6 +26,7 @@ export const logoVectors = [
 export const imgArrow = `${assetPathPrefix}/0635c.svg`;
 export const imgInstagram = `${assetPathPrefix}/469e9.svg`;
 export const imgBaobabs = `${assetPathPrefix}/f4860.jpg`;
+export const videoLafarge = `${assetPathPrefix}/lafarge.mp4`;
 
 export const services = [
   "PRODUCTION AUDIOVISUELLE",
