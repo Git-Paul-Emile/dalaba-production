@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { videoLafargeWebm, videoLafargeMp4, clientLogosRow1, clientLogosRow2 } from "./assets";
+import { videoLafargeWebm, videoLafargeMp4, clientLogosRow1, clientLogosRow2, clientLogosRow3 } from "./assets";
 
 export function BaobabsSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -60,19 +60,14 @@ export function ClientsSection() {
         Ils ont déjà fait preuve de confiance en nous.
       </h2>
 
-      <div className="mt-16 flex flex-col gap-14">
-        {[clientLogosRow1, clientLogosRow2].map((row, i) => (
-          <div key={i} className="flex flex-nowrap items-center justify-center gap-6 sm:gap-10 lg:gap-16">
-            {row.map((logo) => (
-              <img
-                key={logo.alt}
-                alt={logo.alt}
-                src={logo.src}
-                style={{ maxHeight: logo.h }}
-                className="h-auto w-auto max-w-[14%] shrink-0 object-contain sm:max-w-[120px]"
-              />
-            ))}
-          </div>
+      <div className="mx-auto mt-16 grid max-w-[900px] grid-cols-5 items-center gap-x-4 gap-y-10 sm:gap-x-10 sm:gap-y-14">
+        {[...clientLogosRow1, ...clientLogosRow2, ...clientLogosRow3].map((logo) => (
+          <img
+            key={logo.alt}
+            alt={logo.alt}
+            src={logo.src}
+            className="h-12 w-full object-contain sm:h-20"
+          />
         ))}
       </div>
     </section>

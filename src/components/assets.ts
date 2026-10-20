@@ -37,19 +37,25 @@ export const services = [
 ];
 
 export const clientLogosRow1 = [
-  { src: `${assetPathPrefix}/81262.png`, alt: "DNSACU", h: 68 },
-  { src: `${assetPathPrefix}/4224e.png`, alt: "Diamond Holding Productions", h: 84 },
-  { src: `${assetPathPrefix}/8522b.png`, alt: "Sobragui", h: 84 },
-  { src: `${assetPathPrefix}/7aa90.png`, alt: "LafargeHolcim", h: 52 },
-  { src: `${assetPathPrefix}/59f05.svg`, alt: "SimFer", h: 38 },
-  { src: `${assetPathPrefix}/3812c.png`, alt: "FNEG", h: 70 },
+  { src: `${assetPathPrefix}/81262.png`, alt: "DNSACU" },
+  { src: `${assetPathPrefix}/4224e.png`, alt: "Diamond Holding Productions" },
+  { src: `${assetPathPrefix}/8522b.png`, alt: "Sobragui" },
+  { src: `${assetPathPrefix}/7aa90.png`, alt: "LafargeHolcim" },
+  { src: `${assetPathPrefix}/3812c.png`, alt: "FNEG" },
 ];
 
 export const clientLogosRow2 = [
-  { src: `${assetPathPrefix}/e0787.png`, alt: "Korsary", h: 46 },
-  { src: `${assetPathPrefix}/9f1f7.svg`, alt: "Coeur Afrha", h: 84 },
-  { src: `${assetPathPrefix}/87425.png`, alt: "OISAP", h: 74 },
-  { src: `${assetPathPrefix}/81c07.png`, alt: "Alanala Finances", h: 64 },
-  { src: `${assetPathPrefix}/4f4b7.png`, alt: "SAMS", h: 90 },
-  { src: `${assetPathPrefix}/89c49.png`, alt: "Cellcom", h: 74 },
+  { src: `${assetPathPrefix}/e0787.png`, alt: "Korsary" },
+  { src: `${assetPathPrefix}/9f1f7.svg`, alt: "Coeur Afrha" },
+  { src: `${assetPathPrefix}/87425.png`, alt: "OISAP" },
+  { src: `${assetPathPrefix}/81c07.png`, alt: "Alanala Finances" },
+  { src: `${assetPathPrefix}/4f4b7.png`, alt: "SAMS" },
+];
+
+export const clientLogosRow3 = [
+  { src: `${assetPathPrefix}/89c49.png`, alt: "Cellcom" },
+  { src: `${assetPathPrefix}/jug26.png`, alt: "Jeux Universitaires de Guinée" },
+  { src: `${assetPathPrefix}/get01.png`, alt: "Guinée Entreprise Trading" },
+  { src: `${assetPathPrefix}/fegsu.png`, alt: "FEGSU" },
+  { src: `${assetPathPrefix}/fegbx.png`, alt: "FEGUIBOXE" },
 ];
