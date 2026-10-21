@@ -57,7 +57,7 @@ export function ClientsSection() {
   return (
     <section className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-10 lg:px-[115px]">
       <h2 className="text-center text-[28px] leading-tight text-[#161616]" style={{ fontWeight: 500 }}>
-        Ils ont déjà fait preuve de confiance en nous.
+        Ils nous font confiance.
       </h2>
 
       <div className="mx-auto mt-16 grid max-w-[900px] grid-cols-5 items-center gap-x-4 gap-y-10 sm:gap-x-10 sm:gap-y-14">
