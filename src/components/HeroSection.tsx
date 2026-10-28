@@ -1,12 +1,24 @@
 import { DalabaLogo } from "./DalabaLogo";
 import { imgArrow, imgInstagram, services } from "./assets";
 
-function OutlineButton({ label, onClick }: { label: string; onClick?: () => void }) {
+function OutlineButton({ label, onClick, href }: { label: string; onClick?: () => void; href?: string }) {
+  const className =
+    "flex items-center gap-[10px] rounded-[56px] border border-[#b3b3b3] px-[20px] py-[16px] text-[17px] leading-[30px] text-[#b3b3b3] transition-colors duration-200 hover:border-white hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
+
+  if (href) {
+    return (
+      <a href={href} className={className} style={{ fontFamily: "Inter, sans-serif", fontWeight: 400 }}>
+        <span>{label}</span>
+        <img alt="" className="size-[10.92px]" src={imgArrow} />
+      </a>
+    );
+  }
+
   return (
     <button
       type="button"
       onClick={onClick}
-      className="flex items-center gap-[10px] rounded-[56px] border border-[#6d6d6d] px-[20px] py-[16px] text-[17px] leading-[30px] text-[#6d6d6d] transition-colors duration-200 hover:border-white hover:text-white"
+      className={className}
       style={{ fontFamily: "Inter, sans-serif", fontWeight: 400 }}
     >
       <span>{label}</span>
@@ -17,15 +29,16 @@ function OutlineButton({ label, onClick }: { label: string; onClick?: () => void
 
 export function HeroSection({ onContact }: { onContact: () => void }) {
   return (
-    <section className="relative overflow-hidden bg-[#161616]">
+    <section aria-labelledby="home-heading" className="relative overflow-hidden bg-[#161616]">
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-[75px] pb-16 pt-[52px]">
         <DalabaLogo className="w-[200px] sm:w-[260px] lg:w-[320px]" />
 
         <div className="mt-[34px] flex flex-col gap-16 lg:mt-[66px] lg:flex-row lg:justify-between lg:gap-10">
           {/* Left column */}
           <div className="flex max-w-[672px] flex-col gap-[85px]">
-            <div className="flex flex-col gap-[24px] text-[#6d6d6d]">
+            <div className="flex flex-col gap-[24px] text-[#b3b3b3]">
               <h1
+                id="home-heading"
                 className="text-[30px] leading-[34px] sm:text-[33px] sm:leading-[36px] lg:text-[35px] lg:leading-[38px]"
                 style={{ fontWeight: 500, letterSpacing: "-1.7932px" }}
               >
@@ -42,21 +55,26 @@ export function HeroSection({ onContact }: { onContact: () => void }) {
             </div>
             <div className="flex flex-wrap gap-[20px]">
               <OutlineButton label="Travailler avec nous" onClick={onContact} />
-              <OutlineButton label="Showréels de projet" />
+              <OutlineButton label="Showréels de projet" href="#realisations" />
             </div>
           </div>
 
           {/* Right column - services */}
-          <div
-            className="flex flex-col gap-x-[26px] gap-y-[16px] text-[#6d6d6d]"
-            style={{ fontWeight: 500, letterSpacing: "-1px" }}
-          >
-            {services.map((s) => (
-              <p key={s} className="text-[24px] leading-[30.214px] whitespace-nowrap">
-                {s}
-              </p>
-            ))}
-          </div>
+          <section aria-labelledby="services-heading">
+            <h2 id="services-heading" className="sr-only">
+              Services de l’agence créative DALABA Productions
+            </h2>
+            <ul
+              className="flex flex-col gap-x-[26px] gap-y-[16px] text-[#b3b3b3]"
+              style={{ fontWeight: 500, letterSpacing: "-1px" }}
+            >
+              {services.map((s) => (
+                <li key={s} className="text-[24px] leading-[30.214px] whitespace-nowrap">
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
 
         {/* Divider */}
@@ -65,13 +83,13 @@ export function HeroSection({ onContact }: { onContact: () => void }) {
         {/* KADOW + contacts */}
         <div className="mt-10 flex flex-col gap-16 lg:flex-row lg:items-end lg:justify-between">
           <p
-            className="text-[#6d6d6d] leading-none text-[20vw] lg:text-[150px]"
+            className="text-[#b3b3b3] leading-none text-[20vw] lg:text-[150px]"
             style={{ fontWeight: 700, letterSpacing: "-0.11em" }}
           >
             KADOW
           </p>
 
-          <div className="flex shrink-0 flex-col gap-[28px] text-[#6d6d6d]">
+          <div className="flex shrink-0 flex-col gap-[28px] text-[#b3b3b3]">
             <p className="text-[18px] uppercase leading-[29.2px]" style={{ fontWeight: 800 }}>
               Nos contacts
             </p>
@@ -109,11 +127,6 @@ export function HeroSection({ onContact }: { onContact: () => void }) {
                 >
                   <svg className="size-[26.852px]" viewBox="0 0 24 24" fill="rgb(140, 137, 137)" aria-hidden="true">
                     <path d="M16.5 3c.3 2.1 1.5 3.4 3.5 3.6v2.4c-1.2.1-2.3-.3-3.5-1v6.5c0 4-3 6.4-6.6 5.4-2.9-.8-3.9-4.2-2.4-6.7.9-1.5 2.6-2.4 4.3-2.3v2.5c-.4.1-.8.2-1.2.4-1 .6-1.3 1.7-.9 2.6.4.9 1.4 1.3 2.3 1 .8-.3 1.3-1 1.3-2V3h2.7Z" />
-                  </svg>
-                </a>
-                <a href="#" aria-label="Vimeo" className="text-white opacity-90 transition-opacity hover:opacity-100">
-                  <svg className="size-[26.852px]" viewBox="0 0 24 24" fill="rgb(140, 137, 137)" aria-hidden="true">
-                    <path d="M22 7.4c-.1 2.1-1.6 5-4.4 8.6-2.9 3.8-5.4 5.7-7.4 5.7-1.3 0-2.3-1.2-3.2-3.5l-1.7-6.4c-.6-2.3-1.3-3.5-2-3.5-.2 0-.7.3-1.6 1L.6 8.4c1-.9 2-1.9 3-2.8C5 4.3 6 3.6 6.7 3.5c1.6-.2 2.6.9 3 3.3.4 2.6.7 4.2.9 4.9.5 2.2 1 3.3 1.6 3.3.5 0 1.1-.7 2-2.2.9-1.5 1.4-2.6 1.5-3.4.1-1.2-.4-1.8-1.5-1.8-.5 0-1 .1-1.6.4 1-3.3 3-4.9 5.8-4.8 2.1.1 3.1 1.5 3 4.2Z" />
                   </svg>
                 </a>
               </div>

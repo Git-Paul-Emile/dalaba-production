@@ -1,9 +1,15 @@
 {
-  "title": "DALABA PROD | Agence créative & production audiovisuelle",
-  "description": "Agence créative et de production audiovisuelle spécialisée en communication numérique, création & design, cinéma, production vidéo et événementiel.",
+  "title": "DALABA Productions | Agence créative et audiovisuelle à Conakry",
+  "description": "DALABA Productions est une agence créative à Conakry, en Guinée : production audiovisuelle, cinéma, création & design, communication numérique et événementiel.",
   "language": "fr",
   "robots": {
-    "index": false
+    "index": true
+  },
+  "icons": {
+    "icon": "/favicon.svg"
+  },
+  "openGraph": {
+    "image": "https://www.dalaba-productions.com/og-image.png"
   },
   "accessibility": {
     "addBypassLinks": false,

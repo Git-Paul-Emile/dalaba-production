@@ -87,7 +87,7 @@ export function ContactModal({ open, onClose }: { open: boolean; onClose: () => 
                 ]
                   .filter((line) => line !== null)
                   .join("\n");
-                const href = `mailto:contact@dalabaprods.com?subject=${encodeURIComponent(
+                const href = `mailto:contacts@dalabaprod.com?subject=${encodeURIComponent(
                   subject,
                 )}&body=${encodeURIComponent(body)}`;
                 window.location.href = href;
