@@ -59,3 +59,8 @@ export const clientLogosRow3 = [
   { src: `${assetPathPrefix}/fegsu.png`, alt: "FEGSU" },
   { src: `${assetPathPrefix}/fegbx.png`, alt: "FEGUIBOXE" },
 ];
+
+export const clientLogosRow4 = [
+  { src: `${assetPathPrefix}/riotinto-simfer.png`, alt: "Rio Tinto SimFer" },
+  { src: `${assetPathPrefix}/wido.jpg`, alt: "Wido" },
+];

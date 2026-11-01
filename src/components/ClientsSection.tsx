@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { videoLafargeWebm, videoLafargeMp4, clientLogosRow1, clientLogosRow2, clientLogosRow3 } from "./assets";
+import { videoLafargeWebm, videoLafargeMp4, clientLogosRow1, clientLogosRow2, clientLogosRow3, clientLogosRow4 } from "./assets";
 
 export function BaobabsSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -79,7 +79,7 @@ export function ClientsSection() {
       </h2>
 
       <div className="mx-auto mt-16 grid max-w-[900px] grid-cols-5 items-center gap-x-4 gap-y-10 sm:gap-x-10 sm:gap-y-14">
-        {[...clientLogosRow1, ...clientLogosRow2, ...clientLogosRow3].map((logo) => (
+        {[...clientLogosRow1, ...clientLogosRow2, ...clientLogosRow3, ...clientLogosRow4].map((logo) => (
           <img
             key={logo.alt}
             alt={logo.alt}

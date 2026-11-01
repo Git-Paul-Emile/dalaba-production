@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ContactModal } from "./components/ContactModal";
 import { HeroSection } from "./components/HeroSection";
 import { BaobabsSection, ClientsSection } from "./components/ClientsSection";
-import { FaqSection } from "./components/FaqSection";
 import { SiteFooter } from "./components/SiteFooter";
 
 export default function App() {
@@ -15,7 +14,6 @@ export default function App() {
         <HeroSection onContact={() => setContactOpen(true)} />
         <BaobabsSection />
         <ClientsSection />
-        <FaqSection />
       </main>
       <SiteFooter />
     </div>
