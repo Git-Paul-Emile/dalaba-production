@@ -36,31 +36,27 @@ export const services = [
   "ÉVÉNEMENTIEL",
 ];
 
-export const clientLogosRow1 = [
+export const clientLogos = [
   { src: `${assetPathPrefix}/81262.png`, alt: "DNSACU" },
   { src: `${assetPathPrefix}/4224e.png`, alt: "Diamond Holding Productions" },
   { src: `${assetPathPrefix}/8522b.png`, alt: "Sobragui" },
   { src: `${assetPathPrefix}/7aa90.png`, alt: "LafargeHolcim" },
   { src: `${assetPathPrefix}/3812c.png`, alt: "FNEG" },
-];
-
-export const clientLogosRow2 = [
   { src: `${assetPathPrefix}/e0787.png`, alt: "Korsary" },
   { src: `${assetPathPrefix}/9f1f7.svg`, alt: "Coeur Afrha" },
   { src: `${assetPathPrefix}/87425.png`, alt: "OISAP" },
   { src: `${assetPathPrefix}/81c07.png`, alt: "Alanala Finances" },
   { src: `${assetPathPrefix}/4f4b7.png`, alt: "SAMS" },
-];
-
-export const clientLogosRow3 = [
   { src: `${assetPathPrefix}/89c49.png`, alt: "Cellcom" },
   { src: `${assetPathPrefix}/jug26.png`, alt: "Jeux Universitaires de Guinée" },
   { src: `${assetPathPrefix}/get01.png`, alt: "Guinée Entreprise Trading" },
   { src: `${assetPathPrefix}/fegsu.png`, alt: "FEGSU" },
   { src: `${assetPathPrefix}/fegbx.png`, alt: "FEGUIBOXE" },
-];
-
-export const clientLogosRow4 = [
   { src: `${assetPathPrefix}/riotinto-simfer.png`, alt: "Rio Tinto SimFer" },
   { src: `${assetPathPrefix}/wido.jpg`, alt: "Wido" },
 ];
+
+export const clientLogosRow1 = clientLogos.slice(0, 5);
+export const clientLogosRow2 = clientLogos.slice(5, 10);
+export const clientLogosRow3 = clientLogos.slice(10, 15);
+export const clientLogosRow4 = clientLogos.slice(15);
