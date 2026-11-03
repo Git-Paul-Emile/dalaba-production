@@ -1,4 +1,8 @@
+import { createElement as h } from "react";
 import { Body, Container, Head, Hr, Html, Img, Preview, Section, Text } from "@react-email/components";
+
+// Plain .ts (createElement instead of JSX): Vercel's function bundler does not
+// compile .tsx files imported from /api.
 
 export type ContactEmailProps = {
   firstName: string;
@@ -19,48 +23,53 @@ export default function ContactEmail({ firstName, lastName, email, subject, serv
   ];
   if (service) rows.push(["Service", service]);
 
-  return (
-    <Html lang="fr">
-      <Head />
-      <Preview>{`Nouveau message de ${firstName} ${lastName} : ${subject}`}</Preview>
-      <Body style={body}>
-        <Container style={container}>
-          <Section style={header}>
-            <Img src={`${SITE_URL}/logo-email.png`} width="200" height="69" alt="DALABA Productions" />
-          </Section>
-
-          <Section style={content}>
-            <Text style={title}>Nouveau message depuis le site</Text>
-            <Text style={intro}>
-              Une demande de contact a été envoyée via le formulaire de dalaba-productions.com.
-            </Text>
-
-            {rows.map(([label, value]) => (
-              <Section key={label} style={row}>
-                <Text style={rowLabel}>{label}</Text>
-                <Text style={rowValue}>{value}</Text>
-              </Section>
-            ))}
-
-            <Hr style={hr} />
-
-            <Text style={rowLabel}>Message</Text>
-            <Text style={messageText}>{message}</Text>
-
-            <Hr style={hr} />
-
-            <Text style={footnote}>
-              Répondez directement à cet e-mail pour écrire à {firstName} ({email}).
-            </Text>
-          </Section>
-
-          <Section style={footer}>
-            <Text style={footerText}>DALABA PRODUCTIONS · Conakry, République de Guinée</Text>
-            <Text style={footerText}>+224 625 31 35 31 · contacts@dalabaprod.com</Text>
-          </Section>
-        </Container>
-      </Body>
-    </Html>
+  return h(
+    Html,
+    { lang: "fr" },
+    h(Head),
+    h(Preview, null, `Nouveau message de ${firstName} ${lastName} : ${subject}`),
+    h(
+      Body,
+      { style: body },
+      h(
+        Container,
+        { style: container },
+        h(
+          Section,
+          { style: header },
+          h(Img, { src: `${SITE_URL}/logo-email.png`, width: "200", height: "69", alt: "DALABA Productions" }),
+        ),
+        h(
+          Section,
+          { style: content },
+          h(Text, { style: title }, "Nouveau message depuis le site"),
+          h(
+            Text,
+            { style: intro },
+            "Une demande de contact a été envoyée via le formulaire de dalaba-productions.com.",
+          ),
+          ...rows.map(([label, value]) =>
+            h(
+              Section,
+              { key: label, style: row },
+              h(Text, { style: rowLabel }, label),
+              h(Text, { style: rowValue }, value),
+            ),
+          ),
+          h(Hr, { style: hr }),
+          h(Text, { style: rowLabel }, "Message"),
+          h(Text, { style: messageText }, message),
+          h(Hr, { style: hr }),
+          h(Text, { style: footnote }, `Répondez directement à cet e-mail pour écrire à ${firstName} (${email}).`),
+        ),
+        h(
+          Section,
+          { style: footer },
+          h(Text, { style: footerText }, "DALABA PRODUCTIONS · Conakry, République de Guinée"),
+          h(Text, { style: footerText }, "+224 625 31 35 31 · contacts@dalabaprod.com"),
+        ),
+      ),
+    ),
   );
 }
 
