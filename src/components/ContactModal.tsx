@@ -57,7 +57,7 @@ export function ContactModal({ open, onClose }: { open: boolean; onClose: () => 
 
         <div className="mt-12 flex flex-col gap-12 lg:flex-row lg:gap-16">
           <div className="flex shrink-0 flex-col gap-[18px] text-[14px] uppercase text-[#9a9a9a] lg:w-[220px]" style={{ fontWeight: 700 }}>
-            <p className="normal-case">contacts@dalabaprod.com</p>
+            <p className="normal-case">contacts@dalaba-productions.com</p>
             <p>+224 625 31 35 31</p>
             <p>Conakry- République de Guinée</p>
           </div>

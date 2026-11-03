@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import ContactEmail, { type ContactEmailProps } from "../emails/ContactEmail.js";
 
 const FROM = "DALABA PRODUCTIONS <contact@dalaba-productions.com>";
-const TO = process.env.CONTACT_TO_EMAIL || "contacts@dalabaprod.com";
+const TO = process.env.CONTACT_TO_EMAIL || "contacts@dalaba-productions.com";
 
 const LIMITS: Record<keyof ContactEmailProps, number> = {
   firstName: 100,

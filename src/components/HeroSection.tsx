@@ -95,7 +95,7 @@ export function HeroSection({ onContact }: { onContact: () => void }) {
             </p>
             <div className="flex flex-col gap-x-[22px] gap-y-[14px] uppercase" style={{ fontWeight: 700 }}>
               <p className="text-[14px]">+224 625 31 35 31</p>
-              <p className="text-[14px] normal-case">contacts@dalabaprod.com</p>
+              <p className="text-[14px] normal-case">contacts@dalaba-productions.com</p>
               <p className="text-[14px]">Conakry- République de Guinée</p>
               <div className="flex gap-[32px]">
                 <a

@@ -66,7 +66,7 @@ export default function ContactEmail({ firstName, lastName, email, subject, serv
           Section,
           { style: footer },
           h(Text, { style: footerText }, "DALABA PRODUCTIONS · Conakry, République de Guinée"),
-          h(Text, { style: footerText }, "+224 625 31 35 31 · contacts@dalabaprod.com"),
+          h(Text, { style: footerText }, "+224 625 31 35 31 · contacts@dalaba-productions.com"),
         ),
       ),
     ),

@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "Comment contacter DALABA Productions ?",
-    answer: "Appelez le +224 625 31 35 31 ou écrivez à contacts@dalabaprod.com.",
+    answer: "Appelez le +224 625 31 35 31 ou écrivez à contacts@dalaba-productions.com.",
   },
 ];
 
