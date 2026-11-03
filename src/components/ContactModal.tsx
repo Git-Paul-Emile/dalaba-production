@@ -3,6 +3,8 @@ import { services } from "./assets";
 
 export function ContactModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -69,31 +71,37 @@ export function ContactModal({ open, onClose }: { open: boolean; onClose: () => 
           ) : (
             <form
               className="flex flex-1 flex-col gap-8"
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                const data = new FormData(e.currentTarget);
-                const firstName = (data.get("firstName") as string) ?? "";
-                const lastName = (data.get("lastName") as string) ?? "";
-                const email = (data.get("email") as string) ?? "";
-                const subject = (data.get("subject") as string) ?? "";
-                const service = (data.get("service") as string) ?? "";
-                const message = (data.get("message") as string) ?? "";
-                const body = [
-                  `Nom : ${firstName} ${lastName}`,
-                  `E-mail : ${email}`,
-                  service ? `Service : ${service}` : null,
-                  "",
-                  message,
-                ]
-                  .filter((line) => line !== null)
-                  .join("\n");
-                const href = `mailto:contacts@dalabaprod.com?subject=${encodeURIComponent(
-                  subject,
-                )}&body=${encodeURIComponent(body)}`;
-                window.location.href = href;
-                setSent(true);
+                setSending(true);
+                setError(null);
+                try {
+                  const res = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.fromEntries(new FormData(e.currentTarget))),
+                  });
+                  const result = (await res.json().catch(() => ({}))) as { error?: string };
+                  if (!res.ok) throw new Error(result.error);
+                  setSent(true);
+                } catch (err) {
+                  setError(
+                    (err instanceof Error && err.message) ||
+                      "L'envoi a échoué. Vérifiez votre connexion et réessayez.",
+                  );
+                } finally {
+                  setSending(false);
+                }
               }}
             >
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="sr-only"
+              />
               <div>
                 <span className="block text-[15px] text-white" style={{ fontWeight: 700 }}>
                   Nom (requis)
@@ -139,12 +147,18 @@ export function ContactModal({ open, onClose }: { open: boolean; onClose: () => 
                 <label className={fieldLabel} htmlFor="message">Message (requis)</label>
                 <textarea id="message" name="message" rows={3} required className={`${fieldInput} resize-none`} />
               </div>
+              {error && (
+                <p role="alert" className="text-[14px] text-[#F04A35]">
+                  {error}
+                </p>
+              )}
               <button
                 type="submit"
-                className="mt-2 w-fit bg-white px-10 py-3 text-[13px] uppercase tracking-wide text-[#161616] transition-colors hover:bg-[#e5e5e5]"
+                disabled={sending}
+                className="mt-2 w-fit bg-white px-10 py-3 text-[13px] uppercase tracking-wide text-[#161616] transition-colors hover:bg-[#e5e5e5] disabled:cursor-wait disabled:opacity-60"
                 style={{ fontWeight: 700 }}
               >
-                Envoyer
+                {sending ? "Envoi…" : "Envoyer"}
               </button>
             </form>
           )}

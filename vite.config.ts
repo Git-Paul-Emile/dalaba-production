@@ -1,4 +1,4 @@
-import { defineConfig, type HtmlTagDescriptor, type Plugin } from 'vite'
+import { defineConfig, loadEnv, type HtmlTagDescriptor, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
@@ -9,6 +9,8 @@ import siteConfiguration from './.figma/make/site.json'
 export default defineConfig(({ mode }) => {
   // .figma/make/deploy-preview passes `--mode development` for cached-preview builds.
   const emitSourcemaps = mode === 'development'
+  // Expose server-only secrets (RESEND_API_KEY…) from .env.local to the dev API handlers.
+  Object.assign(process.env, loadEnv(mode, process.cwd(), ''))
 
   return {
     base: process.env.FIGMA_PUBLIC_URL ? `${process.env.FIGMA_PUBLIC_URL}/` : '/',
@@ -23,6 +25,7 @@ export default defineConfig(({ mode }) => {
       figmaErrorOverlayReplay(),
       figmaReactRefreshBoundaryFallback(),
       figmaMakeKitPlugin({ storiesGlob: '/src/**/*.stories.{ts,tsx,js,jsx}' }),
+      devApiRoutes(),
     ],
     resolve: {
       alias: {
@@ -66,6 +69,49 @@ type FigmaSiteConfiguration = {
   }
   accessibility?: {
     addBypassLinks?: boolean
+  }
+}
+
+/**
+ * Serves the Vercel functions in /api during `vite dev`. Each /api/<name>
+ * request loads /api/<name>.ts through Vite's SSR loader and calls the
+ * exported handler matching the HTTP method with a Web `Request`.
+ */
+function devApiRoutes(): Plugin {
+  return {
+    name: 'dev-api-routes',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use(async (req, res, next) => {
+        const match = req.url?.split('?')[0].match(/^\/api\/([\w-]+)$/)
+        if (!match) return next()
+
+        try {
+          const mod = await server.ssrLoadModule(`/api/${match[1]}.ts`)
+          const handler = mod[req.method ?? 'GET']
+          if (typeof handler !== 'function') {
+            res.statusCode = 405
+            return res.end()
+          }
+
+          const chunks: Buffer[] = []
+          for await (const chunk of req) chunks.push(chunk as Buffer)
+          const body = chunks.length ? Buffer.concat(chunks) : undefined
+          const request = new Request(`http://${req.headers.host}${req.url}`, {
+            method: req.method,
+            headers: req.headers as Record<string, string>,
+            body,
+          })
+
+          const response: Response = await handler(request)
+          res.statusCode = response.status
+          response.headers.forEach((value, key) => res.setHeader(key, value))
+          res.end(Buffer.from(await response.arrayBuffer()))
+        } catch (err) {
+          next(err as Error)
+        }
+      })
+    },
   }
 }
 

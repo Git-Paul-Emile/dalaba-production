@@ -8,16 +8,22 @@ importers:
 
   .:
     dependencies:
+      '@react-email/components':
+        specifier: ^1.0.12
+        version: 1.0.12(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react:
         specifier: ^19.0.0
         version: 19.2.4
       react-dom:
         specifier: ^19.0.0
         version: 19.2.4(react@19.2.4)
+      resend:
+        specifier: ^6.37.0
+        version: 6.37.0(@react-email/render@2.0.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.0.0
-        version: 4.2.2(vite@8.0.5(jiti@2.6.1))
+        version: 4.2.2(vite@8.0.5(@types/node@22.19.17)(jiti@2.6.1))
       '@types/node':
         specifier: ^22.0.0
         version: 22.19.17
@@ -29,7 +35,7 @@ importers:
         version: 19.2.3(@types/react@19.2.14)
       '@vitejs/plugin-react':
         specifier: ^6.0.0
-        version: 6.0.1(vite@8.0.5(jiti@2.6.1))
+        version: 6.0.1(vite@8.0.5(@types/node@22.19.17)(jiti@2.6.1))
       oxfmt:
         specifier: ^0.2.0
         version: 0.2.0
@@ -41,7 +47,7 @@ importers:
         version: 5.9.3
       vite:
         specifier: ^8.0.5
-        version: 8.0.5(jiti@2.6.1)
+        version: 8.0.5(@types/node@22.19.17)(jiti@2.6.1)
 
 packages:
 
@@ -115,6 +121,185 @@ packages:
     resolution: {integrity: sha512-WkFXliDbwFiziBSfvWXeM0Y3x07Kxxrl39kgsp+N3n5QgzsM8q6qe094+OW+hItDQ+9SSd2y9u231sMCsKxlog==}
     cpu: [x64]
     os: [win32]
+
+  '@react-email/body@0.3.0':
+    resolution: {integrity: sha512-uGo0BOOzjbMUo3lu+BIDWayvn5o6Xyfmnlla5VGf05n8gHMvO1ll7U4FtzWe3hxMLwt53pmc4iE0M+B5slG+Ug==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/button@0.2.1':
+    resolution: {integrity: sha512-qXyj7RZLE7POy9BMKSoqQ00tOXThjOZSUnI2Yu9i29IHngPlmrNayIWBoVKtElES7OWwypUcpiajwi1mUWx6/A==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/code-block@0.2.1':
+    resolution: {integrity: sha512-M3B7JpVH4ytgn83/ujRR1k1DQHvTeABiDM61OvAbjLRPhC/5KLHU5KkzIbbuGIrjWwxAbL1kSQzU8MhLEtSxyw==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/code-inline@0.0.6':
+    resolution: {integrity: sha512-jfhebvv3dVsp3OdPgKXnk8+e2pBiDVZejDOBFzBa/IblrAJ9cQDkN6rBD5IyEg8hTOxwbw3iaI/yZFmDmIguIA==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/column@0.0.14':
+    resolution: {integrity: sha512-f+W+Bk2AjNO77zynE33rHuQhyqVICx4RYtGX9NKsGUg0wWjdGP0qAuIkhx9Rnmk4/hFMo1fUrtYNqca9fwJdHg==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/components@1.0.12':
+    resolution: {integrity: sha512-tH18JhPDWgE+3jnYkzyB6ZrZdfNnEsFe4PwmuXmlOw4NGIysP8wPY5aXZg++pTG9qUabXg1nzX/FGHGkObH8xQ==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/container@0.0.16':
+    resolution: {integrity: sha512-QWBB56RkkU0AJ9h+qy33gfT5iuZknPC7Un/IjZv9B0QmMIK+WWacc0cH6y2SV5Cv/b99hU94fjEMOOO4enpkbQ==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/font@0.0.10':
+    resolution: {integrity: sha512-0urVSgCmQIfx5r7Xc586miBnQUVnGp3OTYUm8m5pwtQRdTRO5XrTtEfNJ3JhYhSOruV0nD8fd+dXtKXobum6tA==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/head@0.0.13':
+    resolution: {integrity: sha512-AJg6le/08Gz4tm+6MtKXqtNNyKHzmooOCdmtqmWxD7FxoAdU1eVcizhtQ0gcnVaY6ethEyE/hnEzQxt1zu5Kog==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/heading@0.0.16':
+    resolution: {integrity: sha512-jmsKnQm1ykpBzw4hCYHwBkt5pW2jScXffPeEH5ZRF5tZeF5b1pvlFTO9han7C0pCkZYo1kEvWiRtx69yfCIwuw==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/hr@0.0.12':
+    resolution: {integrity: sha512-TwmOmBDibavUQpXBxpmZYi2Iks/yeZOzFYh+di9EltMSnEabH8dMZXrl+pxNXzCgZ2XE8HY7VmUL65Lenfu5PA==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/html@0.0.12':
+    resolution: {integrity: sha512-KTShZesan+UsreU7PDUV90afrZwU5TLwYlALuCSU0OT+/U8lULNNbAUekg+tGwCnOfIKYtpDPKkAMRdYlqUznw==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/img@0.0.12':
+    resolution: {integrity: sha512-sRCpEARNVTf3FQhZOC+JTvu5r6ubiYWkT0ucYXg8ctkyi4G8QG+jgYPiNUqVeTLA2STOfmPM/nrk1nb84y6CPQ==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/link@0.0.13':
+    resolution: {integrity: sha512-lkWc/NjOcefRZMkQoSDDbuKBEBDES9aXnFEOuPH845wD3TxPwh+QTf0fStuzjoRLUZWpHnio4z7qGGRYusn/sw==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/markdown@0.0.18':
+    resolution: {integrity: sha512-gSuYK5fsMbGk87jDebqQ6fa2fKcWlkf2Dkva8kMONqLgGCq8/0d+ZQYMEJsdidIeBo3kmsnHZPrwdFB4HgjUXg==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/preview@0.0.14':
+    resolution: {integrity: sha512-aYK8q0IPkBXyMsbpMXgxazwHxYJxTrXrV95GFuu2HbEiIToMwSyUgb8HDFYwPqqfV03/jbwqlsXmFxsOd+VNaw==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/render@2.0.6':
+    resolution: {integrity: sha512-xOzaYkH3jLZKqN5MqrTXYnmqBYUnZSVbkxdb5PGGmDcK6sKDVMliaDiSwfXajRC9JtSHTcGc2tmGLHWuCgVpog==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/row@0.0.13':
+    resolution: {integrity: sha512-bYnOac40vIKCId7IkwuLAAsa3fKfSfqCvv6epJKmPE0JBuu5qI4FHFCl9o9dVpIIS08s/ub+Y/txoMt0dYziGw==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/section@0.0.17':
+    resolution: {integrity: sha512-qNl65ye3W0Rd5udhdORzTV9ezjb+GFqQQSae03NDzXtmJq6sqVXNWNiVolAjvJNypim+zGXmv6J9TcV5aNtE/w==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+
+  '@react-email/tailwind@2.0.7':
+    resolution: {integrity: sha512-kGw80weVFXikcnCXbigTGXGWQ0MRCSYNCudcdkWxebkWYd0FG6/NPoN3V1p/u68/4+NxZwYPVi2fhnp0x23HdA==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      '@react-email/body': '>=0'
+      '@react-email/button': '>=0'
+      '@react-email/code-block': '>=0'
+      '@react-email/code-inline': '>=0'
+      '@react-email/container': '>=0'
+      '@react-email/heading': '>=0'
+      '@react-email/hr': '>=0'
+      '@react-email/img': '>=0'
+      '@react-email/link': '>=0'
+      '@react-email/preview': '>=0'
+      '@react-email/text': '>=0'
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@react-email/body':
+        optional: true
+      '@react-email/button':
+        optional: true
+      '@react-email/code-block':
+        optional: true
+      '@react-email/code-inline':
+        optional: true
+      '@react-email/container':
+        optional: true
+      '@react-email/heading':
+        optional: true
+      '@react-email/hr':
+        optional: true
+      '@react-email/img':
+        optional: true
+      '@react-email/link':
+        optional: true
+      '@react-email/preview':
+        optional: true
+
+  '@react-email/text@0.1.6':
+    resolution: {integrity: sha512-TYqkioRS45wTR5il3dYk/SbUjjEdhSwh9BtRNB99qNH1pXAwA45H7rAuxehiu8iJQJH0IyIr+6n62gBz9ezmsw==}
+    engines: {node: '>=20.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      react: ^18.0 || ^19.0 || ^19.0.0-rc
 
   '@rolldown/binding-android-arm64@1.0.0-rc.12':
     resolution: {integrity: sha512-pv1y2Fv0JybcykuiiD3qBOBdz6RteYojRFY1d+b95WVuzx211CRh+ytI/+9iVyWQ6koTh5dawe4S/yRfOFjgaA==}
@@ -211,6 +396,12 @@ packages:
   '@rolldown/pluginutils@1.0.0-rc.7':
     resolution: {integrity: sha512-qujRfC8sFVInYSPPMLQByRh7zhwkGFS4+tyMQ83srV1qrxL4g8E2tyxVVyxd0+8QeBM1mIk9KbWxkegRr76XzA==}
 
+  '@selderee/plugin-htmlparser2@0.11.0':
+    resolution: {integrity: sha512-P33hHGdldxGabLFjPPpaTxVolMrzrcegejx+0GxjrIb9Zv48D8yAIA/QTDR2dFl7Uz7urX8aX6+5bCZslr+gWQ==}
+
+  '@stablelib/base64@1.0.1':
+    resolution: {integrity: sha512-1bnPQqSxSuc3Ii6MhBysoWCg58j97aUjuCSZrGSmDxNqtytIi0k8utUenAwTZN4V5mXXYGsVUI9zeBqy+jBOSQ==}
+
   '@tailwindcss/node@4.2.2':
     resolution: {integrity: sha512-pXS+wJ2gZpVXqFaUEjojq7jzMpTGf8rU6ipJz5ovJV6PUGmlJ+jvIwGrzdHdQ80Sg+wmQxUFuoW1UAAwHNEdFA==}
 
@@ -304,13 +495,13 @@ packages:
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
 
+  '@types/node@22.19.17':
+    resolution: {integrity: sha512-wGdMcf+vPYM6jikpS/qhg6WiqSV/OhG+jeeHT/KlVqxYfD40iYJf9/AE1uQxVWFvU7MipKRkRv8NSHiCGgPr8Q==}
+
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
     peerDependencies:
       '@types/react': ^19.2.0
-
-  '@types/node@22.19.17':
-    resolution: {integrity: sha512-wGdMcf+vPYM6jikpS/qhg6WiqSV/OhG+jeeHT/KlVqxYfD40iYJf9/AE1uQxVWFvU7MipKRkRv8NSHiCGgPr8Q==}
 
   '@types/react@19.2.14':
     resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
@@ -331,13 +522,37 @@ packages:
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
+  deepmerge@4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
+
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
+  dom-serializer@2.0.0:
+    resolution: {integrity: sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==}
+
+  domelementtype@2.3.0:
+    resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
+
+  domhandler@5.0.3:
+    resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
+    engines: {node: '>= 4'}
+
+  domutils@3.2.2:
+    resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
+
   enhanced-resolve@5.20.1:
     resolution: {integrity: sha512-Qohcme7V1inbAfvjItgw0EaxVX5q2rdVEZHRBrEQdRZTssLDGsL8Lwrznl8oQ/6kuTJONLaDcGjkNP247XEhcA==}
     engines: {node: '>=10.13.0'}
+
+  entities@4.5.0:
+    resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
+    engines: {node: '>=0.12'}
+
+  fast-sha256@1.3.0:
+    resolution: {integrity: sha512-n11RGP/lrWEFI/bWdygLxhI+pVeo1ZYIVwvvPkW7azl/rOy+F3HYRZ2K5zeE9mmkhQppyv9sQFx0JM9UabnpPQ==}
 
   fdir@6.5.0:
     resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
@@ -356,9 +571,19 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
+  html-to-text@9.0.5:
+    resolution: {integrity: sha512-qY60FjREgVZL03vJU6IfMV4GDjGBIoOyvuFdpBDIX9yTlDw0TjxVBQp+P8NvpdIXNJvfWBTNul7fsAQJq2FNpg==}
+    engines: {node: '>=14'}
+
+  htmlparser2@8.0.2:
+    resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
+
   jiti@2.6.1:
     resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
     hasBin: true
+
+  leac@0.6.0:
+    resolution: {integrity: sha512-y+SqErxb8h7nE/fiEX07jsbuhrpO9lL8eca7/Y1nuWV2moNlXhyd59iDGcRf6moVyDMbmTNzL40SUyrFU/yDpg==}
 
   lightningcss-android-arm64@1.32.0:
     resolution: {integrity: sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==}
@@ -433,6 +658,11 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
+  marked@15.0.12:
+    resolution: {integrity: sha512-8dD6FusOQSrpv9Z1rdNMdlSgQOIP880DHqnohobOmYLElGEqAL/JvxvuxZO16r4HtjTlfPRDC1hbvxC9dPN2nA==}
+    engines: {node: '>= 18'}
+    hasBin: true
+
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -443,6 +673,12 @@ packages:
     engines: {node: '>=8.*'}
     hasBin: true
 
+  parseley@0.12.1:
+    resolution: {integrity: sha512-e6qHKe3a9HWr0oMRVDTRhKce+bRO8VGQR3NyVwcjwrbhMmFCX9KszEV35+rn4AdilFAq9VPxP/Fe1wC9Qjd2lw==}
+
+  peberminta@0.9.0:
+    resolution: {integrity: sha512-XIxfHpEuSJbITd1H3EeQwpcZbTLHc+VVr8ANI9t5sit565tsI4/xK3KWTUFE2e6QiangUkh3B0jihzmGnNrRsQ==}
+
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -450,9 +686,21 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
+  postal-mime@2.7.6:
+    resolution: {integrity: sha512-UUlyE2KlxmvwMGq060onF/VWU3zD6dVW31FwokQ5v26jWd35fbs2MoTFzh+jXnPwAyV2MULMKXcBInGOl5TO6Q==}
+
   postcss@8.5.8:
     resolution: {integrity: sha512-OW/rX8O/jXnm82Ey1k44pObPtdblfiuWnrd8X7GJ7emImCOstunGbXUpp7HdBrFQX6rJzn3sPT397Wp5aCwCHg==}
     engines: {node: ^10 || ^12 || >=14}
+
+  prettier@3.9.10:
+    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
+    engines: {node: '>=14'}
+    hasBin: true
+
+  prismjs@1.30.0:
+    resolution: {integrity: sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==}
+    engines: {node: '>=6'}
 
   react-dom@19.2.4:
     resolution: {integrity: sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==}
@@ -463,6 +711,15 @@ packages:
     resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
     engines: {node: '>=0.10.0'}
 
+  resend@6.37.0:
+    resolution: {integrity: sha512-iYNhmhfXVomZr+TMIxf6oqj7kTeGqPDE+wGcYw1H4g8WMBR59NsbShnUz43dSYpStW16iEA6dZs+egqQmdm0zA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@react-email/render': '*'
+    peerDependenciesMeta:
+      '@react-email/render':
+        optional: true
+
   rolldown@1.0.0-rc.12:
     resolution: {integrity: sha512-yP4USLIMYrwpPHEFB5JGH1uxhcslv6/hL0OyvTuY+3qlOSJvZ7ntYnoWpehBxufkgN0cvXxppuTu5hHa/zPh+A==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -471,9 +728,15 @@ packages:
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
+  selderee@0.11.0:
+    resolution: {integrity: sha512-5TF+l7p4+OsnP8BCCvSyZiSPc4x4//p5uPwK8TCnVPJYRmU2aYKMpOXvw8zM5a5JvuuCGN1jmsMwuU2W02ukfA==}
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
+
+  standardwebhooks@1.1.1:
+    resolution: {integrity: sha512-bCbX9ZEyFkWPsRz7Bl3NuQUJohmwGSev/yhr7vhaGPlc4AfIrspIRa6cPTBuI1ItmrTDJ4d/S2hCsfe4+vQGnQ==}
 
   tailwindcss@4.2.2:
     resolution: {integrity: sha512-KWBIxs1Xb6NoLdMVqhbhgwZf2PGBpPEiwOqgI4pFIYbNTfBXiKYyWoTsXgBQ9WFg/OlhnvHaY+AEpW7wSmFo2Q==}
@@ -610,6 +873,130 @@ snapshots:
   '@oxfmt/win32-x64@0.2.0':
     optional: true
 
+  '@react-email/body@0.3.0(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/button@0.2.1(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/code-block@0.2.1(react@19.2.4)':
+    dependencies:
+      prismjs: 1.30.0
+      react: 19.2.4
+
+  '@react-email/code-inline@0.0.6(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/column@0.0.14(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/components@1.0.12(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@react-email/body': 0.3.0(react@19.2.4)
+      '@react-email/button': 0.2.1(react@19.2.4)
+      '@react-email/code-block': 0.2.1(react@19.2.4)
+      '@react-email/code-inline': 0.0.6(react@19.2.4)
+      '@react-email/column': 0.0.14(react@19.2.4)
+      '@react-email/container': 0.0.16(react@19.2.4)
+      '@react-email/font': 0.0.10(react@19.2.4)
+      '@react-email/head': 0.0.13(react@19.2.4)
+      '@react-email/heading': 0.0.16(react@19.2.4)
+      '@react-email/hr': 0.0.12(react@19.2.4)
+      '@react-email/html': 0.0.12(react@19.2.4)
+      '@react-email/img': 0.0.12(react@19.2.4)
+      '@react-email/link': 0.0.13(react@19.2.4)
+      '@react-email/markdown': 0.0.18(react@19.2.4)
+      '@react-email/preview': 0.0.14(react@19.2.4)
+      '@react-email/render': 2.0.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@react-email/row': 0.0.13(react@19.2.4)
+      '@react-email/section': 0.0.17(react@19.2.4)
+      '@react-email/tailwind': 2.0.7(@react-email/body@0.3.0(react@19.2.4))(@react-email/button@0.2.1(react@19.2.4))(@react-email/code-block@0.2.1(react@19.2.4))(@react-email/code-inline@0.0.6(react@19.2.4))(@react-email/container@0.0.16(react@19.2.4))(@react-email/heading@0.0.16(react@19.2.4))(@react-email/hr@0.0.12(react@19.2.4))(@react-email/img@0.0.12(react@19.2.4))(@react-email/link@0.0.13(react@19.2.4))(@react-email/preview@0.0.14(react@19.2.4))(@react-email/text@0.1.6(react@19.2.4))(react@19.2.4)
+      '@react-email/text': 0.1.6(react@19.2.4)
+      react: 19.2.4
+    transitivePeerDependencies:
+      - react-dom
+
+  '@react-email/container@0.0.16(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/font@0.0.10(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/head@0.0.13(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/heading@0.0.16(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/hr@0.0.12(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/html@0.0.12(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/img@0.0.12(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/link@0.0.13(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/markdown@0.0.18(react@19.2.4)':
+    dependencies:
+      marked: 15.0.12
+      react: 19.2.4
+
+  '@react-email/preview@0.0.14(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/render@2.0.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      html-to-text: 9.0.5
+      prettier: 3.9.10
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+
+  '@react-email/row@0.0.13(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/section@0.0.17(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
+  '@react-email/tailwind@2.0.7(@react-email/body@0.3.0(react@19.2.4))(@react-email/button@0.2.1(react@19.2.4))(@react-email/code-block@0.2.1(react@19.2.4))(@react-email/code-inline@0.0.6(react@19.2.4))(@react-email/container@0.0.16(react@19.2.4))(@react-email/heading@0.0.16(react@19.2.4))(@react-email/hr@0.0.12(react@19.2.4))(@react-email/img@0.0.12(react@19.2.4))(@react-email/link@0.0.13(react@19.2.4))(@react-email/preview@0.0.14(react@19.2.4))(@react-email/text@0.1.6(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@react-email/text': 0.1.6(react@19.2.4)
+      react: 19.2.4
+      tailwindcss: 4.2.2
+    optionalDependencies:
+      '@react-email/body': 0.3.0(react@19.2.4)
+      '@react-email/button': 0.2.1(react@19.2.4)
+      '@react-email/code-block': 0.2.1(react@19.2.4)
+      '@react-email/code-inline': 0.0.6(react@19.2.4)
+      '@react-email/container': 0.0.16(react@19.2.4)
+      '@react-email/heading': 0.0.16(react@19.2.4)
+      '@react-email/hr': 0.0.12(react@19.2.4)
+      '@react-email/img': 0.0.12(react@19.2.4)
+      '@react-email/link': 0.0.13(react@19.2.4)
+      '@react-email/preview': 0.0.14(react@19.2.4)
+
+  '@react-email/text@0.1.6(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+
   '@rolldown/binding-android-arm64@1.0.0-rc.12':
     optional: true
 
@@ -660,6 +1047,13 @@ snapshots:
   '@rolldown/pluginutils@1.0.0-rc.12': {}
 
   '@rolldown/pluginutils@1.0.0-rc.7': {}
+
+  '@selderee/plugin-htmlparser2@0.11.0':
+    dependencies:
+      domhandler: 5.0.3
+      selderee: 0.11.0
+
+  '@stablelib/base64@1.0.1': {}
 
   '@tailwindcss/node@4.2.2':
     dependencies:
@@ -722,43 +1116,67 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.2.2
       '@tailwindcss/oxide-win32-x64-msvc': 4.2.2
 
-  '@tailwindcss/vite@4.2.2(vite@8.0.5(jiti@2.6.1))':
+  '@tailwindcss/vite@4.2.2(vite@8.0.5(@types/node@22.19.17)(jiti@2.6.1))':
     dependencies:
       '@tailwindcss/node': 4.2.2
       '@tailwindcss/oxide': 4.2.2
       tailwindcss: 4.2.2
-      vite: 8.0.5(jiti@2.6.1)
+      vite: 8.0.5(@types/node@22.19.17)(jiti@2.6.1)
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
       tslib: 2.8.1
     optional: true
 
-  '@types/react-dom@19.2.3(@types/react@19.2.14)':
-    dependencies:
-      '@types/react': 19.2.14
-
   '@types/node@22.19.17':
     dependencies:
       undici-types: 6.21.0
+
+  '@types/react-dom@19.2.3(@types/react@19.2.14)':
+    dependencies:
+      '@types/react': 19.2.14
 
   '@types/react@19.2.14':
     dependencies:
       csstype: 3.2.3
 
-  '@vitejs/plugin-react@6.0.1(vite@8.0.5(jiti@2.6.1))':
+  '@vitejs/plugin-react@6.0.1(vite@8.0.5(@types/node@22.19.17)(jiti@2.6.1))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-rc.7
-      vite: 8.0.5(jiti@2.6.1)
+      vite: 8.0.5(@types/node@22.19.17)(jiti@2.6.1)
 
   csstype@3.2.3: {}
 
+  deepmerge@4.3.1: {}
+
   detect-libc@2.1.2: {}
+
+  dom-serializer@2.0.0:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      entities: 4.5.0
+
+  domelementtype@2.3.0: {}
+
+  domhandler@5.0.3:
+    dependencies:
+      domelementtype: 2.3.0
+
+  domutils@3.2.2:
+    dependencies:
+      dom-serializer: 2.0.0
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
 
   enhanced-resolve@5.20.1:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.3.2
+
+  entities@4.5.0: {}
+
+  fast-sha256@1.3.0: {}
 
   fdir@6.5.0(picomatch@4.0.4):
     optionalDependencies:
@@ -769,7 +1187,24 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
+  html-to-text@9.0.5:
+    dependencies:
+      '@selderee/plugin-htmlparser2': 0.11.0
+      deepmerge: 4.3.1
+      dom-serializer: 2.0.0
+      htmlparser2: 8.0.2
+      selderee: 0.11.0
+
+  htmlparser2@8.0.2:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.2.2
+      entities: 4.5.0
+
   jiti@2.6.1: {}
+
+  leac@0.6.0: {}
 
   lightningcss-android-arm64@1.32.0:
     optional: true
@@ -824,6 +1259,8 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  marked@15.0.12: {}
+
   nanoid@3.3.11: {}
 
   oxfmt@0.2.0:
@@ -837,9 +1274,18 @@ snapshots:
       '@oxfmt/win32-arm64': 0.2.0
       '@oxfmt/win32-x64': 0.2.0
 
+  parseley@0.12.1:
+    dependencies:
+      leac: 0.6.0
+      peberminta: 0.9.0
+
+  peberminta@0.9.0: {}
+
   picocolors@1.1.1: {}
 
   picomatch@4.0.4: {}
+
+  postal-mime@2.7.6: {}
 
   postcss@8.5.8:
     dependencies:
@@ -847,12 +1293,23 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  prettier@3.9.10: {}
+
+  prismjs@1.30.0: {}
+
   react-dom@19.2.4(react@19.2.4):
     dependencies:
       react: 19.2.4
       scheduler: 0.27.0
 
   react@19.2.4: {}
+
+  resend@6.37.0(@react-email/render@2.0.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)):
+    dependencies:
+      postal-mime: 2.7.6
+      standardwebhooks: 1.1.1
+    optionalDependencies:
+      '@react-email/render': 2.0.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
   rolldown@1.0.0-rc.12:
     dependencies:
@@ -877,7 +1334,16 @@ snapshots:
 
   scheduler@0.27.0: {}
 
+  selderee@0.11.0:
+    dependencies:
+      parseley: 0.12.1
+
   source-map-js@1.2.1: {}
+
+  standardwebhooks@1.1.1:
+    dependencies:
+      '@stablelib/base64': 1.0.1
+      fast-sha256: 1.3.0
 
   tailwindcss@4.2.2: {}
 
@@ -895,7 +1361,7 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  vite@8.0.5(jiti@2.6.1):
+  vite@8.0.5(@types/node@22.19.17)(jiti@2.6.1):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -903,5 +1369,6 @@ snapshots:
       rolldown: 1.0.0-rc.12
       tinyglobby: 0.2.15
     optionalDependencies:
+      '@types/node': 22.19.17
       fsevents: 2.3.3
       jiti: 2.6.1

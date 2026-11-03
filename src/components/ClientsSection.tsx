@@ -78,16 +78,18 @@ export function ClientsSection() {
         Ils nous font confiance.
       </h2>
 
-      <div className="mx-auto mt-16 grid max-w-[1100px] grid-cols-2 sm:grid-cols-3 md:grid-cols-6 items-center gap-x-4 gap-y-10 sm:gap-x-8 sm:gap-y-12">
+      {/* Flex + wrap so the incomplete last row stays centered */}
+      <div className="mx-auto mt-16 flex max-w-[1100px] flex-wrap items-center justify-center gap-y-10 sm:gap-y-12">
         {clientLogos.map((logo) => (
-          <img
-            key={logo.alt}
-            alt={logo.alt}
-            src={logo.src}
-            loading="lazy"
-            decoding="async"
-            className="h-12 w-full object-contain sm:h-16"
-          />
+          <div key={logo.alt} className="w-1/2 px-2 sm:w-1/3 sm:px-4 md:w-1/6">
+            <img
+              alt={logo.alt}
+              src={logo.src}
+              loading="lazy"
+              decoding="async"
+              className="h-12 w-full object-contain sm:h-16"
+            />
+          </div>
         ))}
       </div>
     </section>
