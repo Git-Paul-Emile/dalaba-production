@@ -1,3 +1,4 @@
+import { render } from "@react-email/components";
 import { Resend } from "resend";
 import ContactEmail, { type ContactEmailProps } from "../emails/ContactEmail.js";
 
@@ -54,12 +55,15 @@ export async function POST(request: Request) {
   const data = parse(payload);
   if (typeof data === "string") return json(400, { error: data });
 
+  // Send both HTML and plain-text parts: HTML-only mail scores worse with spam filters
+  const email = ContactEmail(data);
   const { error } = await new Resend(apiKey).emails.send({
     from: FROM,
     to: [TO],
     replyTo: data.email,
     subject: `[Site] ${data.subject}`,
-    react: ContactEmail(data),
+    html: await render(email),
+    text: await render(email, { plainText: true }),
   });
 
   if (error) {
