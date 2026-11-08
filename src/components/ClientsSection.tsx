@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { videoLafargeWebm, videoLafargeMp4, clientLogos } from "./assets";
+import { videoInterview, clientLogos } from "./assets";
 
 export function BaobabsSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -42,11 +42,11 @@ export function BaobabsSection() {
       className="relative h-[340px] w-full overflow-hidden bg-black"
     >
       <h2 id="realisations-heading" className="sr-only">
-        Réalisation audiovisuelle : vidéo officielle de Lafarge
+        Interview du Directeur national de la DNSACU après les Jeux universitaires africains du Caire 2026
       </h2>
       <video
         ref={videoRef}
-        title="LAFARGE - Vidéo officielle"
+        title="Interview du Directeur national DNSACU après les Jeux universitaires africains du Caire 2026"
         className="h-[340px] w-full cursor-pointer object-cover"
         onClick={togglePlay}
         onPlay={() => setPlaying(true)}
@@ -56,8 +56,7 @@ export function BaobabsSection() {
         playsInline
         preload="none"
       >
-        <source src={videoLafargeWebm} type="video/webm" />
-        <source src={videoLafargeMp4} type="video/mp4" />
+        <source src={videoInterview} type="video/mp4" />
       </video>
       <div className="absolute right-4 bottom-4 flex gap-2">
         <button type="button" onClick={togglePlay} className={buttonClass}>

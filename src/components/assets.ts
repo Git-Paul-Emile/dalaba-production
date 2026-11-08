@@ -25,8 +25,7 @@ export const logoVectors = [
 
 export const imgArrow = `${assetPathPrefix}/0635c.svg`;
 export const imgInstagram = `${assetPathPrefix}/469e9.svg`;
-export const videoLafargeWebm = `${assetPathPrefix}/lafarge.webm`;
-export const videoLafargeMp4 = `${assetPathPrefix}/lafarge.mp4`;
+export const videoInterview = `${assetPathPrefix}/interview-directeur-national-dnsacu-cairo-2026.mp4`;
 
 export const services = [
   "PRODUCTION AUDIOVISUELLE",
